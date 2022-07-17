@@ -10,27 +10,28 @@ import {
 } from "./style";
 
 export const Header = () => {
-  const [showNav, setShowNav] = useState<boolean>(false);
+  const [isNavOpen, setIsNavOpen] = useState<boolean>(false);
 
   function handleToggleNavigationMenu() {
-    setShowNav(!showNav);
+    setIsNavOpen(!isNavOpen);
   }
 
   return (
-    <HeaderContainer style={{ backgroundColor: "#333" }}>
+    <HeaderContainer>
       <InnerContainer>
         <LogoWrapper>
           <img src={Logo} alt="" />
         </LogoWrapper>
         <button
           onClick={handleToggleNavigationMenu}
-          title="Toggle menu"
+          aria-label="Toggle menu"
           aria-controls="main-navigation"
+          aria-expanded={isNavOpen}
         >
           <img src={HamburgerIcon} />
         </button>
-        <Navigation isOpen={showNav}>
-          <ul role="list" id="main-navigation" data-visible={showNav}>
+        <Navigation isOpen={isNavOpen}>
+          <ul role="list" id="main-navigation" data-visible={isNavOpen}>
             <li>
               <a href="#">About</a>
             </li>

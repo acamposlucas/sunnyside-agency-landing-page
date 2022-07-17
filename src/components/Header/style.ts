@@ -34,7 +34,7 @@ export const Navigation = styled.nav<NavigationProps>`
 
   ul {
     align-items: center;
-    background-color: ${(props) => props.theme.colors["blue-300"]};
+    background-color: ${(props) => props.theme.colors.white};
     display: ${(props) => (props.isOpen ? "flex" : "none")};
     flex-direction: column;
     gap: 2.5rem;
@@ -45,16 +45,16 @@ export const Navigation = styled.nav<NavigationProps>`
     top: 6rem;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 9999;
 
     &:after {
       content: "";
       width: 0px;
       height: 0px;
-      background-color: red;
       position: absolute;
       top: -24px;
       right: 0;
-      border-bottom: 24px solid red;
+      border-bottom: 24px solid ${(props) => props.theme.colors.white};
       border-left: 24px solid transparent;
       clip-path: polygon(0 100%, 100% 0, 100% 100%);
     }
@@ -75,6 +75,7 @@ export const ContactButton = styled.a`
   background-color: ${(props) => props.theme.colors["yellow-400"]};
   border-radius: 50px;
   color: ${(props) => props.theme.colors.black};
+  cursor: pointer;
   font-family: ${(props) => props.theme.fontFamily.secondary};
   text-transform: uppercase;
   padding-block: 1rem;
