@@ -10,6 +10,7 @@ export const DefaultTheme = {
     "blue-300": "hsl(232, 10%, 55%)",
     "blue-200": "hsl(210, 4%, 67%)",
     white: "hsl(0, 0%, 100%)",
+    black: "hsl(0, 0%, 0%)",
   },
   fontSize: {
     base: "1.125rem",
