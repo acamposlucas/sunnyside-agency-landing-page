@@ -126,7 +126,7 @@ export const GridContainer = styled.div`
   display: grid;
   grid-template-columns: 1fr;
 
-  @media (min-width: 800px) {
+  @media (min-width: 700px) {
     grid-template-columns: repeat(2, 1fr);
   }
 `;
@@ -162,7 +162,7 @@ export const StyledContainer = styled.div`
 
     p {
       color: ${(props) => props.theme.colors["cyan-100"]};
-      font-size: 16px;
+      font-size: ${(props) => props.theme.fontSize.base};
       line-height: 1.5;
     }
   }
