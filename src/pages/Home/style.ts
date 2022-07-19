@@ -50,7 +50,7 @@ export const InnerContainer = styled.div`
   display: grid;
   overflow: hidden;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 800px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -77,7 +77,7 @@ export const InnerContainerContent = styled.div<innerContainerContentProps>`
   width: min(100%, 20rem);
   justify-self: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: 800px) {
     align-items: flex-start;
     text-align: left;
     order: ${(props) => (props.isOdd ? 1 : 0)};
@@ -118,6 +118,52 @@ export const InnerContainerContent = styled.div<innerContainerContentProps>`
       bottom: 0;
       left: -0.5rem;
       border-radius: 6px;
+    }
+  }
+`;
+
+export const GridContainer = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+`;
+
+export const StyledContainer = styled.div`
+  position: relative;
+  height: 600px;
+
+  picture {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  & > .content {
+    text-align: center;
+    position: absolute;
+    padding-inline: 2rem;
+    bottom: 2rem;
+    width: fit-content;
+    h2 {
+      color: ${(props) => props.theme.colors["cyan-100"]};
+      font-weight: ${(props) => props.theme.fontWeight.bold};
+      font-family: ${(props) => props.theme.fontFamily.secondary};
+      margin-block-end: 2rem;
+    }
+
+    p {
+      color: ${(props) => props.theme.colors["cyan-100"]};
+      font-size: 16px;
+      line-height: 1.5;
     }
   }
 `;
