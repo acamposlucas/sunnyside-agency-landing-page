@@ -5,7 +5,7 @@ const TESTIMONIALS = [
   {
     id: 1,
     name: "Emily R.",
-    image: "src/assets/images/image-emily.jpg",
+    image: "/assets/images/image-emily.jpg",
     role: "Marketing Director",
     message:
       "We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.",
@@ -13,7 +13,7 @@ const TESTIMONIALS = [
   {
     id: 2,
     name: "Thomas S.",
-    image: "src/assets/images/image-thomas.jpg",
+    image: "/assets/images/image-thomas.jpg",
     role: "Chief Operating Officer",
     message:
       "Sunnyside's enthusiasm coupled with their keen interest in our brand's success made it a satisfying and enjoyable experience.",
@@ -21,7 +21,7 @@ const TESTIMONIALS = [
   {
     id: 3,
     name: "Jennie F.",
-    image: "src/assets/images/image-jennie.jpg",
+    image: "/assets/images/image-jennie.jpg",
     role: "Business Owner",
     message:
       "Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!",

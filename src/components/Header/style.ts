@@ -3,16 +3,28 @@ import styled from "styled-components";
 export const HeaderContainer = styled.header`
   padding-inline: clamp(1.5rem, 1.5rem, 3rem);
   padding-block: 2rem;
+
+  @media (min-width: 768px) {
+    padding-block: 2rem;
+  }
 `;
 
 export const InnerContainer = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   button {
     border: 0;
     background-color: transparent;
     cursor: pointer;
+    position: absolute;
+    right: 1.5rem;
+    top: 2rem;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
   }
 `;
 
@@ -30,7 +42,7 @@ interface NavigationProps {
 }
 
 export const Navigation = styled.nav<NavigationProps>`
-  display: contents;
+  display: block;
 
   ul {
     align-items: center;
@@ -47,6 +59,17 @@ export const Navigation = styled.nav<NavigationProps>`
     transform: translateX(-50%);
     z-index: 9999;
 
+    @media (min-width: 768px) {
+      position: static;
+      width: auto;
+      display: flex;
+      background-color: transparent;
+      color: white;
+      flex-direction: row;
+      padding-block: 0;
+      transform: translateX(0%);
+    }
+
     &:after {
       content: "";
       width: 0px;
@@ -57,14 +80,26 @@ export const Navigation = styled.nav<NavigationProps>`
       border-bottom: 24px solid ${(props) => props.theme.colors.white};
       border-left: 24px solid transparent;
       clip-path: polygon(0 100%, 100% 0, 100% 100%);
+
+      @media (min-width: 768px) {
+        display: none;
+      }
     }
 
     li {
       a {
         color: ${(props) => props.theme.colors["blue-200"]};
         text-decoration: none;
+
+        @media (min-width: 768px) {
+          color: ${(props) => props.theme.colors.white};
+        }
         &:visited {
           color: ${(props) => props.theme.colors["blue-200"]};
+
+          @media (min-width: 768px) {
+            color: ${(props) => props.theme.colors.white};
+          }
         }
       }
     }
@@ -80,4 +115,8 @@ export const ContactButton = styled.a`
   text-transform: uppercase;
   padding-block: 1rem;
   padding-inline: 1.5rem;
+
+  &:hover {
+    background-color: hsl(100, 100%, 100%, 0.3);
+  }
 `;

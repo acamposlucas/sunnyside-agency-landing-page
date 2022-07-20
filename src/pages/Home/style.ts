@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const BannerContainer = styled.div`
-  background-image: url("src/assets/images/mobile/image-header.jpg");
+  background-image: url("/assets/images/mobile/image-header.jpg");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
@@ -9,7 +9,7 @@ export const BannerContainer = styled.div`
   position: relative;
 
   @media (min-width: 1024px) {
-    background-image: url("src/assets/images/desktop/image-header.jpg");
+    background-image: url("/assets/images/desktop/image-header.jpg");
   }
 `;
 
@@ -34,7 +34,7 @@ export const HeroContainer = styled.div`
   }
 
   a {
-    background-image: url("src/assets/images/icon-arrow-down.svg");
+    background-image: url("/assets/images/icon-arrow-down.svg");
     background-repeat: no-repeat;
     display: block;
     height: 120px;
@@ -50,7 +50,7 @@ export const InnerContainer = styled.div`
   display: grid;
   overflow: hidden;
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -77,10 +77,10 @@ export const InnerContainerContent = styled.div<innerContainerContentProps>`
   width: min(100%, 20rem);
   justify-self: center;
 
-  @media (min-width: 800px) {
+  @media (min-width: 768px) {
     align-items: flex-start;
     text-align: left;
-    order: ${(props) => (props.isOdd ? 1 : 0)};
+    order: ${(props) => (props.isOdd ? 0 : 1)};
     justify-content: center;
   }
 
@@ -108,16 +108,26 @@ export const InnerContainerContent = styled.div<innerContainerContentProps>`
     width: fit-content;
 
     &:after {
+      background-color: ${(props) =>
+        props.isOdd
+          ? `${props.theme.colors["yellow-400"]}`
+          : `${props.theme.colors["red-400"]}`};
       content: "";
       position: absolute;
       width: calc(100% + 1rem);
-      background-color: ${(props) => props.theme.colors["yellow-400"]};
       height: 8px;
       opacity: 0.3;
       color: red;
       bottom: 0;
       left: -0.5rem;
       border-radius: 6px;
+      z-index: -1;
+    }
+
+    &:hover {
+      &:after {
+        opacity: 1;
+      }
     }
   }
 `;
