@@ -12,8 +12,8 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   body {
-    font-size: ${(props) => props.theme.fontSize.base};
-    font-family: ${(props) => props.theme.fontFamily.primary};
+    font-size: 1.125rem;
+    font-family: "Barlow, sans-serif";
     overflow-x: hidden;
   }
 `;
