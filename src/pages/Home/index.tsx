@@ -1,4 +1,5 @@
 import React from "react";
+import { Footer } from "../../components/Footer";
 import { Header } from "../../components/Header";
 import { Gallery } from "./components/Gallery";
 import { Testimonials } from "./components/Testimonials";
@@ -98,6 +99,7 @@ export const Home = () => (
       </GridContainer>
       <Testimonials />
       <Gallery />
+      <Footer />
     </MainContainer>
   </>
 );

@@ -2,8 +2,9 @@ export const DefaultTheme = {
   colors: {
     "red-400": "hsl(7, 99%, 70%)",
     "yellow-400": "hsl(51, 100%, 49%)",
-    "cyan-100": "hsl(167, 40%, 24%)",
+    "cyan-100": "#8cd4c6",
     "cyan-300": "hsl(168, 34%, 41%)",
+    "cyan-400": "hsl(167, 40%, 24%)",
     "blue-700": "hsl(198, 62%, 26%)",
     "blue-500": "hsl(212, 27%, 19%)",
     "blue-400": "hsl(213, 9%, 39%)",

@@ -154,14 +154,14 @@ export const StyledContainer = styled.div`
     bottom: 2rem;
     width: fit-content;
     h2 {
-      color: ${(props) => props.theme.colors["cyan-100"]};
+      color: ${(props) => props.theme.colors["blue-700"]};
       font-weight: ${(props) => props.theme.fontWeight.bold};
       font-family: ${(props) => props.theme.fontFamily.secondary};
       margin-block-end: 2rem;
     }
 
     p {
-      color: ${(props) => props.theme.colors["cyan-100"]};
+      color: ${(props) => props.theme.colors["blue-700"]};
       font-size: ${(props) => props.theme.fontSize.base};
       line-height: 1.5;
     }
