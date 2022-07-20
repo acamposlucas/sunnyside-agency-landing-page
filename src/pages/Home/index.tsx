@@ -1,5 +1,6 @@
 import React from "react";
 import { Header } from "../../components/Header";
+import { Gallery } from "./components/Gallery";
 import { Testimonials } from "./components/Testimonials";
 import {
   BannerContainer,
@@ -64,7 +65,10 @@ export const Home = () => (
               srcSet="src\assets\images\desktop\image-graphic-design.jpg"
               media="(min-width: 800px)"
             />
-            <img src="src\assets\images\mobile\image-graphic-design.jpg" />
+            <img
+              src="src\assets\images\mobile\image-graphic-design.jpg"
+              alt=""
+            />
           </picture>
           <div className="content">
             <h2>Graphic Design</h2>
@@ -93,6 +97,7 @@ export const Home = () => (
         </StyledContainer>
       </GridContainer>
       <Testimonials />
+      <Gallery />
     </MainContainer>
   </>
 );
