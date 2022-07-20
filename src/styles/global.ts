@@ -13,6 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     font-size: ${(props) => props.theme.fontSize.base};
-    font-family: ${(props) => props.theme.fontFamily.primary};  }
+    font-family: ${(props) => props.theme.fontFamily.primary};
     overflow-x: hidden;
+  }
 `;
