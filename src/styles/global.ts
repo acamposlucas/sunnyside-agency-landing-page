@@ -13,7 +13,7 @@ export const GlobalStyle = createGlobalStyle`
   
   body {
     font-size: 1.125rem;
-    font-family: "Barlow, sans-serif";
+    font-family: "Barlow", sans-serif;
     overflow-x: hidden;
   }
 `;
